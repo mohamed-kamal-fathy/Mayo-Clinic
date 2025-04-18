@@ -1,0 +1,104 @@
+.success-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sec-bg-clr);
+    padding: 2rem;
+  }
+
+  .success-card {
+    background: var(--white-clr);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    animation: slideIn 0.5s ease-out;
+  }
+/* to show element in top in the first and same position in the last*/
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .success-icon {
+    font-size: 5rem;
+    color: #28a745;
+    margin-bottom: 1.5rem;
+    animation: scaleIn 0.5s ease-out 0.3s both;
+  }
+/* to show element small in the first and normal size in the last*/
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .success-title {
+    color: var(--heading-clr);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.5s ease-out 0.6s both;
+  }
+/* to hide element  in the first and show in the last*/
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .success-message {
+    color: var(--text-clr);
+    margin-bottom: 2rem;
+    animation: fadeIn 0.5s ease-out 0.9s both;
+  }
+
+  .booking-details {
+    background: var(--sec-bg-clr);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    animation: fadeIn 0.5s ease-out 1.2s both;
+  }
+
+  .booking-details p {
+    margin-bottom: 0.5rem;
+  }
+
+  .booking-details strong {
+    color: var(--heading-clr);
+  }
+
+  .home-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out 1.5s both;
+  }
+
+  .home-btn:hover {
+    background-color: #2c6ab3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  

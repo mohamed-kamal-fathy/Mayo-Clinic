@@ -1,0 +1,135 @@
+.medicines-section {
+    padding: 5rem 0;
+    background-color: var(--sec-bg-clr);
+}
+
+.medicines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 2rem;
+}
+
+.medicine-card {
+    background: var(--white-clr);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--primary-clr);
+    box-shadow: .3rem .3rem 0 rgba(22, 160, 133, .2);
+}
+
+.medicine-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-card i {
+    font-size: 3rem;
+    color: var(--primary-clr);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.medicine-card:hover i {
+    transform: scale(1.2);
+}
+
+.medicine-card h3 {
+    color: var(--heading-clr);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.medicine-card p {
+    color: var(--text-clr);
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    font-size: 1.25rem;
+    color: var(--primary-clr);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/************************************************* Chatbot styles *************************************************/
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+}
+
+.chat-window {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: var(--white-clr);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.chat-header {
+    background: var(--primary-clr);
+    color: var(--white-clr);
+    padding: 1rem;
+    text-align: center;
+}
+
+.chat-messages {
+    height: 300px;
+    padding: 1rem;
+    overflow-y: auto;
+    
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+.chat-input button {
+    padding: 0.5rem 1rem;
+    background: var(--primary-clr);
+    color: var(--white-clr);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.medicine-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}

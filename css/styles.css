@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+/*********************************************************************** start basics *******************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+:root {
+    --primary-clr: #377ed2;
+    --white-clr: #ffffff;
+    --heading-clr: #041528;
+    --text-clr: #777777;
+    --sec-bg-clr: #F5F5F5;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.container {
+    width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    line-height: 1.7;
+    color: var(--text-clr);
+}
+
+.heading {
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    color: var(--heading-clr);
+    text-shadow: 0.2rem 0.2rem 0 rgb(0 0 0 / 20%);
+}
+
+.heading span {
+    color: var(--primary-clr);
+}
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem;
+    background-color: transparent;
+    border: 2px solid var(--primary-clr);
+    border-radius: 0.5rem;
+    box-shadow: .3rem .3rem 0 rgba(22, 160, 133, .2);
+    text-transform: capitalize;
+    color: var(--primary-clr);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.btn:hover {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+.btn span {
+    padding: 0.5rem .7rem;
+    border-radius: 0.3rem;
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+    margin-left: 0.3rem;
+    transition: all .3s ease-in-out;
+}
+.btn:hover span {
+    background-color: var(--white-clr);
+    color: var(--primary-clr);
+    margin-left: .5rem;
+}
+/*********************************************************************** end basics *****************************************************/
+/*********************************************************************** start header ***************************************************/
+.header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.25rem 0;
+    background-color: var(--white-clr);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+}
+.header-row {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand {
+    font-size: 1.5rem;
+    color: var(--heading-clr);
+}
+.brand i {
+    color: var(--primary-clr);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li:not(:last-child) {
+    margin-right: 25px;
+}
+
+.nav-links li a {
+   /* display: block;*/
+    font-size: 17px;
+    color: var(--text-clr);
+    transition: all .3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-clr);
+}
+/*************************************************************** end header ***************************************************************/
+/*************************************************************** start home ***************************************************************/
+.home {
+    margin-top: 75px;
+    padding: 30px 30px 0px 30px ;
+    background-color: var(--sec-bg-clr);
+}
+.home-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.home-img, 
+.home-text {
+    flex: 0 0 50%;
+    max-width: 28%;
+}
+
+.home-text h2 {
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+
+}
+
+.home-text p {
+    margin-bottom: .5rem;
+}
+/************************************************************** end home *****************************************************************/
+/************************************************************ start statistics ************************************************************/
+.statistics {
+    padding: 5.5rem 0;
+}
+.statistics .statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 30px;
+}
+.statistic {
+    padding: 1.5rem 2rem;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    text-align: center;
+    box-shadow: .3rem .3rem 0 rgba(22, 160, 133, .2);
+}
+.statistic i {
+    font-size: 3rem;
+    color: var(--primary-clr);
+    margin-bottom: 0.75rem;
+}
+.statistic h3 {
+    font-size: 2.5rem;
+    padding-bottom: 0;
+}
+/***************************************************************** end statistics ****************************************************/
+/*************************************************************** start our services ****************************************************/
+.our-services {
+    padding: 5rem 0;
+    background-color: var(--sec-bg-clr);
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.service {
+    padding: 1.5rem 2rem;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    box-shadow: .3rem .3rem 0 rgba(22, 160, 133, .2);
+}
+.service i {
+    font-size: 3rem;
+    color: var(--primary-clr);
+    margin-bottom: 1rem;
+}
+.service h3 {
+    font-size: 1.5rem;
+    color: var(--heading-clr);
+    margin-bottom: .5rem;
+}
+/******************************************************************* end our services **************************************************/
+/******************************************************************* start about us *****************************************************/
+.about-us {
+    padding: 5rem 0;
+}
+.about-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-img, 
+.about-text {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.about-text h3 {
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.about-text p {
+    margin-bottom: .5rem;
+}
+/****************************************************************** end about us ************************************************************/
+/***************************************************************** start our doctors ********************************************************/
+.our-doctors {
+    padding: 5rem 0;
+    background-color: var(--sec-bg-clr);
+}
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.doctor {
+    padding: 1.5rem 2rem;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    box-shadow: .3rem .3rem 0 rgba(22, 160, 133, .2);
+    text-align: center;
+}
+.doctor-img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+}
+.doctor-name {
+    font-size: 1.5rem;
+    color: var(--heading-clr);
+}
+.doctor-review {
+    display: block;
+    color: var(--primary-clr);
+    margin-bottom: 1rem;
+}
+.social-media li {
+    display: inline-block;
+    margin: 0 .15rem;
+}
+.social-media li a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    font-size: 1.25rem;
+    color: var(--primary-clr);
+    transition: all .3s ease-in-out;
+}
+.social-media li a:hover {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+/************************************************************************ end our doctors ****************************************************/
+/************************************************************************* start book section ************************************************/
+.book {
+    padding: 5rem 0;
+}
+.book-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.book-img, 
+.book-form {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.book-form {
+    width: 100%;
+    padding: 15px 15px;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    box-shadow: .3rem .3rem 0 rgba(22, 160, 133, .2);
+    text-align: center;
+} 
+
+.book-form h3 {
+    font-size: 1.5rem;
+    color: var(--heading-clr);
+    margin-bottom: 1.5rem;
+}
+.book-form input ,
+.book-form textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem .5rem;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    background-color: transparent;
+    font-size: 1rem;
+}
+.book-form input[type='submit'] {
+    margin-bottom: 0 !important;
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.book-form input[type='submit']:hover {
+    
+}
+/********************************************************************** end book section *****************************************************/
+/********************************************************************** start  reviews *************************************************/
+.clients-review {
+    padding: 5rem 0;
+    background-color: var(--sec-bg-clr);
+}
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
+}
+.client-review {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 2rem;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    box-shadow: .3rem .3rem 0 rgba(22, 160, 133, .2);
+    text-align: center;
+}
+
+.client-img {
+    position: relative;
+    z-index: 0;
+    display: block;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+    border: 2px solid var(--white-clr);
+    border-radius: 50%;
+    margin-bottom: .5rem;
+}
+.client-name {
+    position: relative;
+    z-index: 2;
+    font-size: 1.25rem;
+    color: #142448;
+}
+
+.stars li {
+    display: inline-block;
+    
+}
+.stars li i {
+    font-size: .85rem;
+    color: var(--primary-clr);
+}
+.review {
+    margin-top: 2rem;
+}
+/******************************************************************************** end clients review ****************************************/
+/********************************************************************************* start our blogs ******************************************/
+.our-blogs {
+    padding: 5rem 0;
+}
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
+}
+.blog {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    border: 2px solid var(--primary-clr);
+    border-radius: .25rem;
+    box-shadow: .3rem .3rem 0 rgba(22, 160, 133, .2);
+}
+.blog .img {
+    display: flex;
+    height: 11rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.blog-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: .25rem;
+    transition: all .3s ease-in-out;
+}
+.blog:hover .blog-img {
+    transform: scale(1.2);
+}
+.blog-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .75rem;
+}
+.blog-row a {
+    font-size: .85rem;
+    color: var(--text-clr);
+    transition: all .3s ease-in-out;
+}
+.blog-row a:hover {
+    color: var(--primary-clr);
+}
+.blog-row a i {
+    margin-right: .25rem;
+    color: var(--primary-clr);
+}
+.blog-title {
+    font-size: 1.5rem;
+    color: var(--heading-clr);
+    margin-bottom: .5rem;
+}
+/********************************************************************** end our blogs ********************************************************/
+/************************************************************************* start footer ********************************************************/
+footer {
+    padding: 3rem 0 2rem;
+    background-color: var(--sec-bg-clr);
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 30px;
+    padding-bottom: 1.5rem;
+}
+.foot h3 {
+    font-size: 1.25rem;
+    color: var(--heading-clr);
+    margin-bottom: 1rem;
+}
+.foot ul li a {
+    display: block;
+    font-size: .85rem;
+    color: var(--text-clr);
+    margin-bottom: 1rem;
+}
+.foot ul li a i {
+    margin-right: .25rem;
+    color: var(--primary-clr);
+    transition: all .2s ease-in-out;
+}
+.foot ul li a:hover i {
+    margin-right: 1rem;
+}
+.credit {
+    padding-top: 1.75rem;
+    border-top: 1px solid #ddd;
+}
+.credit p {
+    text-align: center;
+}
+.credit p a {
+    color: var(--primary-clr);
+}
+/*********************************************************************** end footer ********************************************************/

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicines Services</title>
+    <link rel="shortcut icon" type="image" href="img/m.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/medicines.css" />
+    <style>
+      /* Search bar styles */
+      .search-container {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .search-bar {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+        border: 2px solid #1e96dd;
+        border-radius: 30px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-bar"
+        id="medicineSearch"
+        placeholder="Search for medicines..."
+        onkeyup="searchMedicines()"
+      />
+    </div>
+    <section class="medicines-section" id="medicines">
+      <div class="container">
+        <h2 class="heading">Our <span>Medicines</span></h2>
+        <div class="medicines-grid">
+          <div class="medicine-card">
+            <i class="fas fa-pills"></i>
+            <h3>Pain Relief</h3>
+            <p>Effective pain management medications for various conditions.</p>
+            <div class="price">$25.99</div>
+            <a href="#" class="btn"
+              >Order Now <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+          <div class="medicine-card">
+            <i class="fas fa-capsules"></i>
+            <h3>Antibiotics</h3>
+            <p>Prescription antibiotics for bacterial infections.</p>
+            <div class="price">$35.99</div>
+            <a href="#" class="btn"
+              >Order Now <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+          <div class="medicine-card">
+            <i class="fas fa-prescription-bottle-alt"></i>
+            <h3>Vitamins</h3>
+            <p>Essential vitamins and supplements for daily health.</p>
+            <div class="price">$19.99</div>
+            <a href="#" class="btn"
+              >Order Now <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+          <div class="medicine-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Cardiac Care</h3>
+            <p>Medications for heart-related conditions.</p>
+            <div class="price">$45.99</div>
+            <a href="#" class="btn"
+              >Order Now <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+          <div class="medicine-card">
+            <i class="fas fa-brain"></i>
+            <h3>Neurological</h3>
+            <p>Specialized medications for neurological disorders.</p>
+            <div class="price">$55.99</div>
+            <a href="#" class="btn"
+              >Order Now <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+          <div class="medicine-card">
+            <i class="fas fa-allergies"></i>
+            <h3>Allergy Relief</h3>
+            <p>Medications for allergy symptoms and management.</p>
+            <div class="price">$29.99</div>
+            <a href="#" class="btn"
+              >Order Now <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+      <button class="chat-button" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+      </button>
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+          <h3>Medicine Assistant</h3>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="message" style="color: rgb(30, 144, 255)">
+            Hey!  👋  How can I help you today?!
+          </div>
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            placeholder="Type your message..."
+            id="userInput"
+          />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleChat() {
+        const chatWindow = document.getElementById("chatWindow");
+        if (chatWindow.style.display === "none") {
+          chatWindow.style.display = "block";
+        } else {
+          chatWindow.style.display = "none";
+        }
+      }
+
+      function sendMessage() {
+        const input = document.getElementById("userInput");
+        const messages = document.getElementById("chatMessages");
+
+        if (input.value.trim() !== "") {
+          // Add user message
+          const userMessage = document.createElement("div");
+          userMessage.className = "message";
+          userMessage.textContent = input.value;
+          // add user message to the chat messages
+          messages.appendChild(userMessage);
+
+          // Clear input
+          input.value = "";
+
+          // Simulate bot response
+          setTimeout(() => { // wait for 1 second to run the code
+            const botMessage = document.createElement("div");
+            botMessage.className = "message";
+            //  space  message
+            botMessage.style.marginTop = "10px";
+            botMessage.style.color = "rgb(30, 144, 255)";
+            // add bot message to the chat messages
+            botMessage.textContent =
+              "Thank you for your message. Our team Recived your message and will assist you shortly. 😊";
+            messages.appendChild(botMessage);
+          }, 1000);
+        }
+      }
+
+      function searchMedicines() {
+        let input = document.getElementById("medicineSearch");
+        let filter = input.value.toLowerCase();
+        let cards = document.getElementsByClassName("medicine-card");
+
+        for (let i = 0; i < cards.length; i++) {
+          let title = cards[i].getElementsByTagName("h3")[0];
+          let txtValue = title.textContent;
+
+          if (txtValue.toLowerCase().indexOf(filter) > -1) {
+            // txtValue = Vitamins    , filter = vit
+            cards[i].style.display = ""; // Vitamins.indexof(vit) > -1
+          } else {
+            cards[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
